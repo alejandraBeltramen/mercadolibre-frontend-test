@@ -1,0 +1,17 @@
+<ul class="search-route">
+    <li ng-repeat="category in productList.categories" class="route-item">
+        {{category}}
+    </li>
+</ul>
+<section class="main-container" ng-repeat="product in productList.items | limitTo:4">
+    <a class="searched-product" ng-href="#/items/{{product.id}}">
+        <div class="product-img">
+            <img class="product-list-img" ng-src="{{product.picture}}" alt="">
+        </div>
+        <div class="product-info">
+            <span class="product-price"> {{product.price.amount}} </span>
+            <i ng-show=product.free_shipping class="product-shipping"></i>
+            <p class="product-title">{{product.title}}</p>
+        </div>
+    </a>
+</section>
