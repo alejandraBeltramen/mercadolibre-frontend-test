@@ -1,0 +1,36 @@
+<ul class="search-route">
+    <li ng-repeat="category in categories" class="route-item">
+        {{category}}
+    </li>
+</ul>
+<section class="main-container">
+    <div class="product-detail">
+        <!--IMAGE SECTION-->
+        <div class="product-detail-img">
+            <img class="product-detail-picture" ng-src="{{productData.item.picture}}" alt="">
+        </div>
+
+        <!--PRODUCT DETAILS-->
+        <div class="product-detail-info">
+            <span class="product-detail-state">
+                {{productData.item.condition}} - {{productData.item.sold_quantity}} vendidos
+            </span>
+            <div class="product-detail-title">
+                {{productData.item.title}}
+            </div>
+            <span class="product-detail-price">
+                $ {{productData.item.price.amount}}
+                <sup>00</sup>
+            </span>
+            <a id="buy-button" href="">Comprar</a>
+        </div>
+
+        <!--PRODUCT DESCRIPTION-->
+        <div class="product-detail-description">
+            <h2>Descripción del producto</h2>
+            <div class="product-detail-description-content">
+                {{productData.item.description}}
+            </div>
+        </div>
+    </div>
+</section>
